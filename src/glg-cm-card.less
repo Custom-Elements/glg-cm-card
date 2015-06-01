@@ -1,0 +1,47 @@
+:host{
+  .mainContainer{
+    border: solid 1px #E0E0E0;
+    border-radius: 2px;
+    margin-top: .5em;
+    font-family: Helvetica;
+    font-size: .9em;
+  }
+  .bioWhContainer, .contactContainer, .contactHeader {
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    // margin-bottom: .25em;
+    padding: .25em;
+    > *:not(:last-child){
+      padding-right: 1em;
+    }
+  }
+  .contactContainer, .contactHeader{
+    align-items: center;
+  }
+  .jobHistory{
+    width: 50%;
+    height: 12em;
+    font-size: .7em;
+    flex: 1 0 0;
+  }
+
+  ui-grid /deep/ grid-row, ui-grid /deep/ grid-header, ui-grid /deep/ grid{
+    border: 0px;
+  }
+
+  .bio{
+    width: 50%;
+    flex: 1.75 0 0;
+  }
+  .startDate, .endDate{
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .contactHeader{
+    background-color: #EBEBEB;
+    border-bottom: solid 1px #E0E0E0;
+  }
+}

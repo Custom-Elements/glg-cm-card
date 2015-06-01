@@ -1,0 +1,16 @@
+{
+  "name": "glg-cm-card",
+  "version": "0.0.0",
+  "dependencies": {
+    "polymer": "git://github.com/custom-elements/polymer",
+    "polymer-serve": "^0.0.30",
+    "ui-fonts": "^0.0.1",
+    "ui-styles": "git://github.com/custom-elements/ui-styles"
+  },
+  "author": "Sayeef Bazli <sayeef.bazli@gmail.com>, Josh Levy <levy.5674@gmail.com>",
+  "repository": "git@github.com:Custom-Elements/glg-cm-card.git",
+  "license": "MIT",
+  "scripts": {
+    "test": "polymer-serve ."
+  }
+}

@@ -1,0 +1,31 @@
+<link rel="import" href="https://services.glgresearch.com/ui-toolkit/polymer.html">
+<link rel="import" href="https://services.glgresearch.com/ui-toolkit/node_modules/ui-grid/src/ui-grid.html">
+
+<polymer-element name="glg-cm-card" attributes="data" noscript>
+  <template>
+    <link rel="stylesheet" type="text/css" href="./glg-cm-card.less">
+    <div class="mainContainer">
+      <div class="contactHeader">
+        <div class="name"><a href="https://services.glgresearch.com/advisors/#/cm/{{data.CmId}}" target="#{}">{{data.Name}}</a></div>
+        <div class="rate">Rate: ${{data.Rate}}</div>
+      </div>
+      <div class="contactContainer">
+        <div class="email">Email: {{data.Email}}</div>
+        <div class="phone" hidden?="{{ !data.Phone || data.Phone == 'null' }}">Phone: {{data.Phone}}</div>
+        <div class="cell" hidden?="{{ !data.Cell || data.Cell == 'null' }}">Cell: {{data.Cell}}</div>
+      </div>
+      <div class="bioWhContainer">
+        <div class="bio">{{data.Bio}}</div>
+        <div class="jobHistory"><ui-grid value="{{data.JobHistory}}" id="historyTable"></ui-grid></div>
+      </div>
+    </div>
+  </template>
+</polymer-element>
+
+<polymer-element name="glg-cm-card-stack" attributes="data" noscript>
+  <template>
+    <template repeat="{{d in data}}">
+      <glg-cm-card data="{{d}}"></glg-cm-card>
+    </template>
+  </template>
+</polymer-element>
