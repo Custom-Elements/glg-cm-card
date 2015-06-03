@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="./glg-cm-card.less">
     <div class="mainContainer {{ {selected: selected} | tokenList}}">
       <div class="contactHeader">
+        <div class="compliance {{data.Compliance.Status}}" title="{{data.Compliance.Reason | joinNewLine}}"></div>
         <div class="name"><a href="https://services.glgresearch.com/advisors/#/cm/{{data.CmId}}" target="#{}">{{data.Name}}</a></div>
         <div class="rate">Rate: ${{data.Rate}}</div>
       </div>

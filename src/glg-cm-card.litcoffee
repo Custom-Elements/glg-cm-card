@@ -13,6 +13,10 @@
           @fire 'card-selected',
             @data
 
+      joinNewLine:(value)->
+        if value
+          value.join('\n');
+
 
 #glg-cm-card-stack
 
