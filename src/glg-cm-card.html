@@ -1,8 +1,8 @@
 <link rel="import" href="https://services.glgresearch.com/ui-toolkit/node_modules/ui-grid/src/ui-grid.html">
-<polymer-element name="glg-cm-card" attributes="data" noscript>
+<polymer-element name="glg-cm-card" attributes="data, selected" on-click="{{addLabel}}">
   <template>
     <link rel="stylesheet" type="text/css" href="./glg-cm-card.less">
-    <div class="mainContainer">
+    <div class="mainContainer {{ {selected: selected} | tokenList}}">
       <div class="contactHeader">
         <div class="name"><a href="https://services.glgresearch.com/advisors/#/cm/{{data.CmId}}" target="#{}">{{data.Name}}</a></div>
         <div class="rate">Rate: ${{data.Rate}}</div>
@@ -20,10 +20,10 @@
   </template>
 </polymer-element>
 
-<polymer-element name="glg-cm-card-stack" attributes="data" noscript>
+<polymer-element name="glg-cm-card-stack" attributes="data">
   <template>
     <template repeat="{{d in data}}">
       <glg-cm-card data="{{d}}"></glg-cm-card>
     </template>
   </template>
-</polymer-element>
+<script src="./glg-cm-card.litcoffee"></script>
