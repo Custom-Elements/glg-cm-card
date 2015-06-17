@@ -17,6 +17,8 @@
         if value
           value.join('\n');
 
+      domReady:()->
+        @fire 'card-dom-ready'
 
 #glg-cm-card-stack
 
@@ -32,3 +34,16 @@
               'index': index
 
         selected
+
+      dataChanged: ()->
+        @readyTracker = 0
+
+      cardReadyTracker: ()->
+        if (@data)
+          @readyTracker += 1
+
+          if @data.length <= @readyTracker
+            @fire 'glg-cm-card-stack-ready'
+
+      ready: ()->
+        @readyTracker = 0

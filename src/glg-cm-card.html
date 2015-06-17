@@ -21,7 +21,7 @@
   </template>
 </polymer-element>
 
-<polymer-element name="glg-cm-card-stack" attributes="data">
+<polymer-element name="glg-cm-card-stack" attributes="data" on-card-dom-ready="{{cardReadyTracker}}">
   <template>
     <template repeat="{{d in data}}">
       <glg-cm-card data="{{d}}" class="cmid{{d.CmId}}"></glg-cm-card>
