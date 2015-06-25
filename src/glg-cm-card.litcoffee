@@ -13,9 +13,15 @@
           @fire 'card-selected',
             @data
 
+      dataChanged:(o, n)->
+        @_jobHistory = @data.JobHistory
+
       joinNewLine:(value)->
         if value
           value.join('\n');
+
+      ready:()->
+        @_jobHistory = []
 
       domReady:()->
         @fire 'card-dom-ready'
