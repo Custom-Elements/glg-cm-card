@@ -18,10 +18,10 @@
 
       joinNewLine:(value)->
         if value
-          value.join('\n');
+          value.join('\n')
 
       ready:()->
-        @_jobHistory = []
+        @_jobHistory = [{}]
 
       domReady:()->
         @fire 'card-dom-ready'

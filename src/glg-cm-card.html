@@ -1,4 +1,4 @@
-<link rel="import" href="https://services.glgresearch.com/ui-toolkit/node_modules/ui-grid/src/ui-grid.html">
+<link rel="import" href="https://services.glgresearch.com/ui-toolkit/node_modules/ui-filtered-grid/src/ui-filtered-grid.html">
 <polymer-element name="glg-cm-card" attributes="data, selected" on-click="{{addLabel}}">
   <template>
     <link rel="stylesheet" type="text/css" href="./glg-cm-card.less">
@@ -15,7 +15,7 @@
       </div>
       <div class="bioWhContainer">
         <div class="bio">{{data.Bio}}</div>
-        <div class="jobHistory"><ui-grid value="{{_jobHistory}}" id="historyTable"></ui-grid></div>
+        <div class="jobHistory"><ui-filtered-grid value="{{_jobHistory}}" id="historyTable"></ui-filtered-grid></div>
       </div>
     </div>
   </template>
