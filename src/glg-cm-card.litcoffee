@@ -14,14 +14,19 @@
             @data
 
       dataChanged:(o, n)->
-        @_jobHistory = @data.JobHistory
+        @_jobHistory = if @data.JobHistory.length > 0 then @data.JobHistory else [@blankHistory]
 
       joinNewLine:(value)->
         if value
           value.join('\n')
 
       ready:()->
-        @_jobHistory = [{}]
+        @blankHistory =
+          "Company": "",
+          "Title": "",
+          "Start Date": "",
+          "End Date": "",
+        @_jobHistory = [@blankHistory]
 
       domReady:()->
         @fire 'card-dom-ready'
