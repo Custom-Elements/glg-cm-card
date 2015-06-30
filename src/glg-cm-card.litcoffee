@@ -24,8 +24,8 @@
         @blankHistory =
           "Company": "",
           "Title": "",
-          "Start Date": "",
-          "End Date": "",
+          "Start": "",
+          "End": "",
         @_jobHistory = [@blankHistory]
 
       domReady:()->
